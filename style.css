@@ -1,0 +1,110 @@
+.container {
+    width: 800px;
+    margin: 50px auto;
+    border: 2px solid black;
+    color :#ff0000;
+    background-image :url(animated-rainbow.gif);
+  }
+
+  .output {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-bottom:2px solid black;
+    box-sizing: border-box;
+  }
+  .input {
+    width:200px;
+
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    width: 200px;
+  }
+
+  .num_bth, #clear, #equal_btn{
+    font-size: 150%;
+    font-weight:600;
+    animation:rainbow 3s infinite;
+    -webkit-animation:rainbow 3s infinite;
+    
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+    width: 40px;
+    height: 30px;
+    margin:5px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+    transition: 0.2s;
+  }
+  @-webkit-keyframes rotate {
+    100% {
+      -webkit-transform: rotate(1turn);
+      transform: rotate(1turn);
+    }
+}
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+  @keyframes rainbow{
+    12%{color:#ff5353;}
+    24%{color:#ffcf53;}
+    36%{color:#e8ff53;}
+    48%{color:#53ff5d;}
+    60%{color:#53ffbc;}
+    72%{color:#5393ff;}
+    84%{color:#ca53ff;}
+    100%{color:#ff53bd;}
+}
+@-webkit-keyframes rainbow{
+    12%{color:#ff5353;}
+    24%{color:#ffcf53;}
+    36%{color:#e8ff53;}
+    48%{color:#53ff5d;}
+    60%{color:#53ffbc;}
+    72%{color:#5393ff;}
+    84%{color:#ca53ff;}
+    100%{color:#ff53bd;}
+}
+
+  @keyframes num_bth {
+    to { background-position-x: 200%; }
+  }
+
+.num_bth:hover{
+  border-radius: 20px;
+  
+}
+.num_bth::before,#clear::before, #equal_btn::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #399953;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+  -webkit-animation: rotate 4s linear infinite;
+  animation: rotate 4s linear infinite;
+  
+}
+
+.num_bth:active, #clear:active, #equal_btn:active{
+  transition: 0.5s;
+  border-radius: 100px;
+}
