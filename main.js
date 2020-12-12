@@ -1,6 +1,7 @@
 'use strict'
 {
   const num_bth = document.querySelectorAll('.num_bth');
+
   let output_sub = document.getElementById('output_sub');//計算結果を表示する場所
   const output_total = document.getElementById('output_total');//計算過程を表示する場所
   let total = 0;//計算式を表す変数 
@@ -114,6 +115,12 @@
     document.title = calc;
     mode ='integer_mode'//整数モードに戻す
   }
+
+  //嘘ボタンを押したときのメッセージ
+  const fake = document.querySelectorAll('.fake');
+  fake.addEventListener('click', () => {
+    alert('押しても何も起こらないぞ')
+  })
 
   //BSボタン（バックスペース）を押した時の処理
   const bs = document.getElementById('bs')
