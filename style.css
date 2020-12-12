@@ -27,7 +27,7 @@
     width: 200px;
   }
 
-  .num_bth, #clear, #equal_btn{
+  .num_bth, #clear, #equal_btn #fake_btn{
     font-size: 150%;
     font-weight:600;
     animation:rainbow 3s infinite;
