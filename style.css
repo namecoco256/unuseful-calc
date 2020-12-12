@@ -27,7 +27,7 @@
     width: 200px;
   }
 
-  .num_bth, #clear, #equal_btn, #fake_btn{
+  .num_bth, #clear, #equal_btn{
     font-size: 150%;
     font-weight:600;
     animation:rainbow 3s infinite;
@@ -86,7 +86,7 @@
   border-radius: 20px;
   
 }
-.num_bth::before,#clear::before, #equal_btn::before, #fake_btn::before{
+.num_bth::before,#clear::before, #equal_btn::before {
   content: '';
   position: absolute;
   z-index: -2;
@@ -104,7 +104,7 @@
   
 }
 
-.num_bth:active, #clear:active, #equal_btn:active, #fake_btn:active{
+.num_bth:active, #clear:active, #equal_btn:active{
   transition: 0.5s;
   border-radius: 100px;
 }
